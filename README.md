@@ -1,6 +1,6 @@
 # R-Capstone
 ## Coursera - Data Science Specialization Capstone
-* Author:  Kolesnikov Sergey
+* Author:  Darius Kharazi
 * Date: 29.09.2016  
 * [Email](mailto:scitator@gmail.com)  
 * [GitHub url](https://github.com/Scitator/R-Capstone)
