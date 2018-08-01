@@ -3,7 +3,7 @@
 * Author: Darius Kharazi
 * Date: July 31, 2018  
 * [GitHub URL](https://github.com/dkharazi/Shiny-WordSuggestion)
-* [Presentation URL](http://rpubs.com/Scitator/NextWordPredictionApp)
+* [Presentation URL](http://rpubs.com/dariuskharazi/408948)
 * [Shiny App](https://dariuskharazi.shinyapps.io/WordSuggestion)
 
 ## Overview
