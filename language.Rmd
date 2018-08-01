@@ -1,11 +1,21 @@
 ---
-title: "Language"
+title: "Word Suggestion"
 author: "Darius Kharazi"
 date: "7/29/2018"
 output: html_document
 ---
 
+## Synopsis
+
+The goal of this exercise is to create a product that deals with natural language processing in some way. The application needs to include a user-implemented prediction algorithm and an interface that can be accessed by others. I decided to create a Shiny app that receives an input phrase in a text box input and outputs a prediction of the next word. Specifically, we will need to include the following in our research:
+
+- Basic summaries
+- Potential input phrases, predicted words, and frequencies
+- a Shiny app
+
 ## Import Statements
+
+First let's read in the libraries and data.
 
 ```{r setup, message=FALSE}
 ## Import libraries
@@ -24,6 +34,8 @@ set.seed(456)
 
 ## Data Preprocessing
 
+After reading in the raw datasets, we'd like to find the most commonly used words by calculating the frequencies for each word. In order to speed up the processing time during our calculations, we'll need to take a sample from the three datasets, but ensure that the sample is large enough to properly represent the data. In the fields of computational linguistics and probability, an "n-gram" is a contiguous sequence of "n" items from a given sequence of text or speech. Here, we will find the top 10 unigrams, bigrams, trigrams, and quadgrams from the sample.
+
 ```{r process}
 ## Sample the data
 sample <- sample(c(twit, news, blog), 500000, replace = FALSE)
@@ -39,6 +51,8 @@ sample <- gsub("\\s+", " ", sample) # remove extra spaces
 ```
 
 ## Calculating the Frequencies of N-Grams
+
+The prediction algorithm is based on an N-gram model with "Stupid Backoff." The algorithm checks to see if the highest-order (in this case, n=5) n-gram has been seen. If the highest-order is not applicable, the predicted word will "degrade" to a lower-order model (n=4, then 3, then 2). For additional prediction accuracy, common linguistic tweaks were implemented, as well.
 
 ```{r ngram}
 ## Create document-term matrices
@@ -114,6 +128,8 @@ dfm5$phrase <- as.character(dfm5$phrase)
 ```
 
 ## Example Phrase
+
+We want to test our prediction algorithm to see if we receive an acceptable suggested word by providing our program an example phrase. In this case, we provided the phrase _My,  1 dog_, since the phrase contains extra spaces, punctuation marks, numbers, and capital letters, which will be a good test for our algorithm. Feel free to adjust the phrase to some other text, but we will work with this phrase for now. After running our algorithm, our predicted word that has been suggested to us is _is_. According to the data and our document feature matrix, this is the most frequent word that proceeds the phrase _my dog_, so our algorithm has proven to be effective.
 
 ```{r ngrams}
 ## Example phrase
