@@ -11,7 +11,7 @@ The goal of this exercise is to create a product that deals with natural languag
 
 - Basic summaries
 - Potential input phrases, predicted words, and frequencies
-- a Shiny app
+- A Shiny app
 
 ## Import Statements
 
