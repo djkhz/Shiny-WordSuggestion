@@ -28,7 +28,7 @@ The original english corpus combined over 580 MB of language information. Which 
 
 Dataset: [NLP Data](https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip) [580 MB]
 
-## 6-Step Process
+## The 6-Step Process
 
   1. Getting the data
   2. Data splitting
@@ -39,7 +39,7 @@ Dataset: [NLP Data](https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Co
   
 ## Running the App
 
-Simply run the Shipy app server from the Shiny directory or URL. In order to run the Shiny app locally, you will need to build your own prediction model. In order to do this, run the "app.R" file and configure the directories for the "dfm2," "dfm3," "dfm4," and "dfm5" variables within the script. If you would like a step-by-step process of preprocessing the data, building the prediction model, and using it for example phrase, go to the rmarkdown file and configure the "data" directories, as noted.
+To use the Shiny app, simply run the Shipy app server from the Shiny directory or URL. In order to run the Shiny app locally, you will need to build your own prediction model. In order to do this, run the "app.R" file and configure the directories for the "dfm2," "dfm3," "dfm4," and "dfm5" variables within the script. If you would like a step-by-step process of preprocessing the data, building the prediction model, and using it for example phrase, go to the rmarkdown file and configure the "data" directories, as noted. To generate the cleaned data locally, run the "n-gram.R" file.
 
 ## Additional Information
 
